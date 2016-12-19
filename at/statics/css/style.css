@@ -1,0 +1,227 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+body{
+    padding-top: 80px;
+}
+
+.nav-custom{
+    height: 80px;
+    background: #0284c4;
+    border: none;
+}
+
+#bs-example-navbar-collapse-1{
+    background: #0284c4;
+    text-align: center;
+}
+
+.navbar-default .navbar-toggle {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+
+}
+
+.navbar-default .navbar-nav>li{
+    padding-top: 17px;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+
+.banner{
+    background-image: url("../images/slider.png");
+    width: 100%;
+    min-height: 585px;
+}
+
+.bao-hiem{
+    padding-top: 200px;
+}
+.img-banner{
+    width: 100%;
+}
+
+.img-gioithieu{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.img-quyenloi{
+    width: 100%;
+}
+
+.gioithieu{
+    margin-top: 50px;
+}
+
+.tinhnang h4 {
+    text-transform: uppercase;
+    color: #0082C5;
+    font-size: 14px;
+    height: 30px;
+    font-weight: 600;
+}
+
+.sec-title.has-bg {
+    padding: 15px 15px 0px 15px;
+}
+
+
+.sec-title h3 {
+    font-size: 18px;
+    color: #0099FF;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.tienich-info {
+    position: relative;
+}
+
+.t-title a {
+    color: #407798;
+}
+
+.tienich-info .overlay .box-holder .box {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tienich-info .overlay .box-holder .box p {
+    padding: 0px 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+}
+
+#thongtin .info2 {
+    margin-top: 5px;
+    color: #666;
+}
+
+.table{
+    border-radius: 0;
+}
+
+.table_phi {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.table_phi td, .table_phi th {
+    border: 1px solid #666666;
+    padding: 8px;
+}
+.panel>.table>tbody:first-child>tr:first-child td, .panel>.table>tbody:first-child>tr:first-child th {
+    text-align: center;
+}
+
+.img-thongtin{
+    width: 100%;
+    padding: 0 15px;
+}
+
+.footer{
+    border-top: 4px solid #CBCBCB;
+}
+
+.copyright {
+    padding: 5px 6px;
+    margin-top: 6px;
+}
+
+.footer nav ul li {
+    float: right;
+    list-style-type: none;
+    margin: 10px;
+}
+
+.reg-now {
+    top: 80px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="number"], input[type="email"], textarea {
+    -moz-box-sizing: border-box;
+    border-radius: 1px;
+    box-shadow: none;
+    color: #666;
+    font: 12px/16px Arial;
+    height: 40px;
+    margin-bottom: 13px;
+    padding: 6px 12px;
+    resize: none;
+    border: 1px solid rgba(182, 182, 182, 0.4);
+    width: 100%;
+}
+
+.sub-form:hover, .sub-form:focus, .sub-form:active {
+    background: #FFB600;
+    border-color: #FFB600;
+    color: #fff;
+    -webkit-box-shadow: 0px 7px 0px #D37F00;
+    -moz-box-shadow: 0px 7px 0px #D37F00;
+    box-shadow: 0px 7px 0px #D37F00;
+}
+.desc {
+    color: #fff;
+    font: 20px/36px 'OpenSans_Regular', Arial;
+}
+
+.mo-ta-tin {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover   {
+    border-bottom: 3px solid #ffb600;
+    background: transparent;
+    color: #fff;
+}
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: absolute;
+    top: -44px;
+    width: 100%;
+    color: #fff;
+}
+
+.sub-form{
+    text-align: center;
+}

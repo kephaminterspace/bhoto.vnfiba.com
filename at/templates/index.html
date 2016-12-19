@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EPTI Insurance - Bảo Hiểm Bưu Điện</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}" rel="shortcut icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <script src="{{url_for('static', filename='js/jquery-1.10.1.min.js')}}"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-fixed-top navbar-default nav-custom ">
+            <div class="container ">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/">
+                        <img src="{{url_for('static', filename='images/logo.png')}}"  alt="#">
+                    </a>
+                    <ul class="nav navbar-nav navbar-right" id="nav-moblie-default">
+                        <li id="li_home" ><a href="javascript:void(0)"  >GIỚI THIỆU</a></li>
+                    </ul>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav_click active" id="gioi_thieu" >
+                            <a href="javascript:void(0)" >GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav_click" id="loi_ich" >
+                            <a href="javascript:void(0)"  >LỢI ÍCH VỢT TRỘI</a>
+                        </li>
+                        <li class="nav_click" id="quyen_loi" >
+                            <a href="javascript:void(0)" >QUYỀN LỢI</a>
+                        </li>
+                        <li class="nav_click" id="bao_hiem">
+                            <a href="javascript:void(0)"   >PHÍ BÀO HIỂM</a>
+                        </li>
+                        <li class="nav_click" id="thong_tin">
+                            <a href="javascript:void(0)"   >THÔNG TIN CẦN BIẾT</a>
+                        </li>
+                        <li class="nav_click" id="cau_hoi_thuong_gap">
+                            <a href="javascript:void(0)"   >CÂU HỎI THƯỜNG GẶP</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="banner">
+            <div class="container">
+                <div class="" id="target_gioi_thieu">
+                    <div  class=" bao-hiem col-md-5">
+                        <h2 class="h-Bold">BẢO HIỂM BỆNH HIỂM NGHÈO</h2>
+                        <p class="desc">Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim</p>
+
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="reg-now col-md-4">
+                         <form class='reg-now-visible' id='formIndex' action="/" method="post" accept-charset="utf-8" role="form">
+                            {{ form.hidden_tag() }}
+                             {% for field in form if field.widget.input_type != 'hidden' %}
+                                {% if field.errors %}
+                                    <div class="loading alert" style="color: red;"><a class="close" data-dismiss="alert">×</a>
+                                    {%for error in field.errors%}
+                                            {{error}}</br>
+                                        {%endfor%}
+                                    </div>
+                              {%endif%}
+                            {%endfor%}
+                            <div class="clr"></div>
+                             <div class='control-group'>
+                                <input type="text" name="name" {%if form.data.name%} value="{{form.data.name|safe}}" {%endif%} placeholder='Họ và tên' required oninvalid="setCustomValidity('Họ và tên là bắt buộc')" oninput="setCustomValidity('')"/>
+                            </div>
+                            <div class='control-group'>
+                                <input type="text" id="phone" name="phone" value={%if form.data.phone %} "{{form.data.phone|safe}}" {%else%} "" {%endif%} placeholder='Số điện thoại' required pattern="^[0-9]{10,12}$" oninvalid="setCustomValidity('Số điện thoại không chính xác')" oninput="setCustomValidity('')"/>
+                            </div>
+
+                            <div class="relative">
+                                 <input type="text" name="car_type" placeholder='Loại Xe'/>
+                            </div>
+                            <div class="relative">
+                                 <input type="text" name="year_make" placeholder='Năm sản xuất'/>
+
+                            </div>
+
+                            <div class='control-group'>
+                                <input type="text" name="code_promotion" value={%if form.data.code_promotion%} "{{form.data.code_promotion|safe}}" {%else%} "" {%endif%} placeholder='Mã xác thực'/>
+                            </div>
+                            <p>
+                                  {%if form.toidongy.data%}
+                                <input type="checkbox" id="toidongy" name="toidongy" required oninvalid="setCustomValidity('Bạn phải đồng ý với điều khoản này')" onchange="setCustomValidity('')" checked/>
+                                {%else%}
+                                <input type="checkbox" id="toidongy1" name="toidongy" required oninvalid="setCustomValidity('Bạn phải đồng ý với điều khoản này')" onchange="setCustomValidity('')"/>
+                                {%endif%}
+                                Bằng cách nhấp vào "Đăng Ký Ngay" Quý khách đồng ý với điều khoản của ngân hàng EPTI.</p>
+                            <button type="submit" value="Register Now" class='btn submit sub-form' name="submit">Đăng ký ngay</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <!--<img class="img-banner" src="images/slider.png"  alt="#">-->
+
+        <div class="container" id="target_loi_ich">
+            <!--<img class="img-gioithieu" src="images/gioithieu-bg.png"  alt="#">-->
+            <div class="row">
+                <div class="bg-tn" style="text-align:center; color: #fff; margin-top: 0px;">
+                    <div class="sec-title">
+                        <h3 style="color: #fff;">
+                            <span>Mỗi năm ở Việt Nam có thêm</span>
+                            <p>hàng trăm ngàn người mắc những bệnh hiểm nghèo</p>
+                        </h3>
+                        <h3 style="color: #fff;"> </h3>
+                    </div>
+                    <p class="mo-ta-tin">...như ung thư, đột quỵ, suy thận .. Những căn bệnh này đã trở nên phổ biến hơn và có thể xảy ra với bất kỳ ai. Ngày nay, với tiến bộ của y khoa và phương pháp điều trị, bệnh hiểm nghèo thật sự không phải là dấu chấm hết. Nếu được phát hiện sớm, nhiều người mắc bệnh hoàn toàn có thể hy vọng hồi phục và trở lại cuộc sống bình thường.</p>
+                    <p class="mo-ta-tin">Bảo hiểm bệnh hiểm nghèo của Tổng công ty cổ phần Bảo hiểm Bưu điện là sản phẩm bảo hiểm ĐẦU TIÊN tại thị trường bảo hiểm phi nhân thọ ở Việt Nam. Tham gia bảo hiểm bệnh hiểm nghèo của PTI, khách hàng sẽ được cung cấp nguồn tài chính kịp thời cho quá trình điều trị và đảm bảo kế hoạch tài chính cho bản thân và gia đình.</p>
+                    <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">Nhận tư vấn ngay</button></a></p>
+                    <div class="clr"></div>
+                </div>
+
+            </div>
+            <div class="row text-center gioithieu">
+                <div class="col-md-3">
+                    <img alt="" src="{{url_for('static', filename='images/icon1.png')}}">
+                    <div class="content tinhnang" >
+                        <h4>Độ tuổi tham gia rộng từ 01 tuổi đến 60 tuổi</h4>
+                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img alt="" src="{{url_for('static', filename='images/icon2.png')}}">
+                    <div class="content tinhnang">
+                        <h4>Phạm vi bảo vệ đến 14 bệnh hiểm nghèo</h4>
+                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
+                    <div class="content tinhnang">
+                        <h4> Chi trả 100% số tiền bảo hiếm</h4>
+                        <p>Dịch vụ thông báo kết quả khoản vay trong vòng 24 giờ</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img alt="" src="{{url_for('static', filename='images/icon4.png')}}">
+                    <div class="content tinhnang">
+                        <h4>Độ tuổi tham gia rộng từ 01 tuổi đến 60 tuổi</h4>
+                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                    </div>
+                </div>
+            </div>
+            <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#" >
+            <div class="sec-title has-bg" id="target_quyen_loi">
+                <h3>Quyền lợi</h3>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img1.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content1">
+                                    <img  src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content1"> CÁC BỆNH HIỂM NGHÈO ĐƯỢC BẢO HIỂM</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img2.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content2">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content2">SỐ TIỀN BÀO HIỂM</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img3.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content3">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content3">PHẠM VI BẢO HIỂM</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img5.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content5">
+                                    <img  src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content5">QUYỀN LỢI BẢO HIỂM BỔ SUNG THỦY KÍCH</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img6.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content6">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content6">BẢO LÃNH THANH TOÁN</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img7.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content7">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content7">GIÁM ĐỊNH TẠI ĐỊA ĐIỂM THEO YÊU CẦU CỦA KHÁCH HÀNG</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
+
+            <div class="row" style="margin-top:0px;">
+                <div class="col-md-8">
+                    <div class="sec-title has-bg" id="target_bao_hiem">
+                        <h3>Phí bảo hiểm</h3>
+                    </div>
+                    <p>
+                        <strong>+ Phí bảo hiểm cơ bản:</strong> căn cứ vào giá trị thực tế của xe tại thời điểm tham gia bảo hiểm.
+    <br><strong>+ Phí bảo hiểm bổ sung:</strong> phụ thuộc vào các hạng mục bổ sung mà người tham gia bảo hiểm mong muốn. 14 hạng mục bổ sung của bao hiểm ô tô toàn diện bao gồm: không trừ khấu hao, lựa chọn cơ sở sửa chữa chính hãng, Bảo hiểm thiệt hại động cơ do hiện tượng thủy, mất cắp bộ phận, Bảo hiểm tăng mức miễn thường, Bảo hiểm vật chất xe ô tô lưu hành tạm thời.......
+    <br>
+    <br>Phí bảo hiểm = Số tiền bảo hiểm x Tỷ lệ phí
+    Tỷ lệ phí = Tỷ lệ phí cơ bản + Tỉ lệ phí lựa chọn bổ sung (lựa chọn gara sửa chữa, bảo hiểm thủy kích, ...)
+
+                    </p>
+               </div>
+               <div class="col-md-4" style="margin-top:20px;">
+                    <img src="{{url_for('static', filename='images/phi-bao-hiem.png')}}" alt="">
+               </div>
+            </div>
+            <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
+            <div class="sec-title has-bg" id="target_thong_tin">
+                <h3>Thông tin cần thiết</h3>
+            </div>
+            <!--<img class="img-thongtin" src="images/img4.png"  alt="#">-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <!--<li data-target="#myCarousel" data-slide-to="1" class=""></li>-->
+                    <!--<li data-target="#myCarousel" data-slide-to="2" class=""></li>-->
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="{{url_for('static', filename='images/img4.png')}}" alt="Chania">
+                        <div class="carousel-caption">
+                            <h3>Quy tắc bảo hiểm</h3>
+                            <p><strong>Công ty bảo hiểm:</strong> là Tổng công ty
+                                Cổ phần Bảo hiểm Bưu điện và các
+                                Công ty thành viên, sau đây gọi tắt là
+                                PTI.</p>
+                            <p>
+                                <a  href="https://www.epti.vn/upload/Sanpham/QuyTac-BH%20BenhHiemNgheo%20(2).pdf" target="_blank">
+                                    <button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">xem chi tiết</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center su-menh">
+                <div class="sec-title">
+                    <h3 style="">
+                        sứ mệnh của chúng tôi là mang đến an sinh xã hội
+                    </h3>
+                </div>
+                <p>Bạn cần hiểu thêm thông tin về sản phẩm dịch vụ của Bảo hiểm PTI, Hãy trò chuyện cùng chúng tôi! Liên hệ với chúng tôi để được tư vấn!</p>
+                <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">nhận tư vấn ngay</button></a></p>
+                <div class="clr"></div>
+            </div>
+
+            <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
+            <div id="target_cau_hoi_thuong_gap">
+                        <div class="sec-title">
+                            <h3> Câu hỏi thường gặp</h3>
+                        </div>
+
+                    <div class="">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Khi nào thì tôi được PTI bồi thường? Và sẽ thông báo cho ai khi cần?</h3>
+                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+                            <div class="panel-body" style="display: none;">PTI chi trả bảo hiểm khi khách hàng mắc bệnh lần đầu tiên 1 trong những bệnh hiểm nghèo có ghi trong Hợp đồng bảo hiểm. Khi phát hiện căn bệnh, khách hành sẽ gọi đến Insmart (04 3772 8106 - 08 39290256) hoặc Hotline PTI - 1900 545475 để được hướng dẫn chi tiết hơn.</div>
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Khi tham gia bảo hiểm bệnh hiểm nghèo tôi có phải đi khám bệnh trước đó không? Hoặc yêu cầu gửi hồ sơ bác sĩ</h3>
+                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+                            <div class="panel-body" style="display: none;">KH không cần đi khám bênh trước khi tham gia bảo hiểm bệnh hiểm nghèo tại PTI</div>
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Thời gian tôi nhận được tiền bồi thường là bao nhiêu lâu?</h3>
+                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+                            <div class="panel-body" style="display: none;">Sau 30 ngày chờ từ khi có kết luận của Bác sĩ</div>
+                        </div>
+                    </div>
+                </div>
+
+            <footer class="main-wrapper footer">
+                <div class="container bottom">
+                    <div class="fl copyright">
+                        <p><strong>Tổng Công Ty Bảo Hiểm Bưu Điện – PTI</strong></p>
+                        <p>Website: <a href="https://www.pti.vn/">www.pti.com.vn</a></p>
+                        <p>Bảo hiểm TRỰC TUYẾN: <a href="https://www.epti.vn/">www.epti.vn</a></p>
+                        <p>Hotline: <strong>1900 54 54 75</strong></p>
+                        </div>
+                    <nav>
+                        <ul style="margin:0px;">
+                            <li class="firstItem">
+                                <a href="javascript:void(0);"><img src="{{url_for('static', filename='images/logo1.png')}}"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><img src="{{url_for('static', filename='images/logo2.png')}}"></a>
+                            </li>
+                            <li class="lastItem">
+                                <a href="javascript:void(0);"><img src="{{url_for('static', filename='images/logo3.png')}}"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- This contains the hidden content for inline calls -->
+                <div style='display:none'>
+                    <div id='inline_content1' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Các bệnh hiểm nghèo được bảo hiểm</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <p>
+                            <br>1 : Nhồi máu cơ tim lần đầu
+                            <br>2 : Đột quỵ
+                            <br>3 : Ung thư
+                            <br>4 : Suy thận
+                            <br>5 : Liệt vĩnh viễn các chi
+                        </p>
+                        <p>
+                            Cứ mỗi năm tái tục, Người được bảo hiểm sẽ được bổ sung  một (01) bệnh hiểm nghèo vào Danh sách bệnh hiểm nghèo được bảo hiểm theo. Cụ thể:
+                            <br>Năm tái tục thứ 1 : U não lành tính
+                            <br>Năm tái tục thứ 2 : Phẫu thuật thông động mạch vành
+                            <br>Năm tái tục thứ 3 : Cấy ghép nội tạng
+                            <br>Năm tái tục thứ 4 : Đa xơ cứng
+                            <br>Năm tái tục thứ 5 : Phẫu thuật ghép động mạch chủ
+                            <br>Năm tái tục thứ 6 : Tăng huyết áp động mạch phổi
+                            <br>Năm tái tục thứ 7 : Thay thế van tim
+                            <br>Năm tái tục thứ 8 : Bệnh Parkinson
+                            <br>Năm tái tục thứ 9 : Bệnh gan giai đoạn cuối
+                            <br>Chi trả 100% Số tiền bảo hiểm khi không may mắc phải Bệnh hiểm nghèo (theo danh sách như trên) xuất hiện lần đầu theo chẩn đoán của bác sỹ trong thời hạn bảo hiểm
+                        </p>
+                    </div>
+                </div>
+
+                <div style='display:none'>
+                    <div id='inline_content2' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Số tiền bảo hiểm</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <p>
+                            <br>Lựa chọn 1: 110,000,000 VND/ người/ năm
+                            <br>Lựa chọn 2: 220,000,000 VND/ người/ năm
+                            <br>Lựa chọn 3: 330,000,000 VND/ người/ năm
+                        </p>
+                    </div>
+                </div>
+
+                <div style='display:none'>
+                    <div id='inline_content3' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Phạm vi bảo hiểm</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <br>
+                        <p>
+                            <br>Trường hợp Người được bảo hiểm mắc phải bệnh hiểm nghèo trong thời hạn bảo hiểm, PTI sẽ chi trả toàn bộ số tiền bảo hiểm được nêu cụ thể trong Hợp đồng với điều kiện sau:
+                            <br>a. Bệnh hiểm nghèo xuất hiện lần đầu đối với Người được bảo hiểm theo chẩn đoán của bác sỹ, và
+                            <br>b. Người được bảo hiểm còn sống ít nhất 30 ngày kể từ ngày kết luận của bác sỹ.
+                            <br>Hợp đồng bảo hiểm sẽ kết thúc sau khi Người được bảo hiểm nhận được số tiền bồi thường và không tái tục cho những năm sau.
+                        </p>
+                    </div>
+                </div>
+
+            </footer>
+
+            <div id="back-top-wrapper" class="visible-lg">
+                <p id="back-top" class="bounceIn">
+                    <a href="#top">
+                        <span></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='js/jquery-1.10.1.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/modernizr.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.bxslider.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.customSelect.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.validate.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.colorbox-min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+        <script src="{{url_for('static', filename='js/loader.js')}}"></script>
+
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+        <script src="//cdn.accesstrade.vn/js/tracking.js" ></script>
+        <script type="text/javascript">
+            AT.track();
+            function clearValidity() {
+                document.getElementById('yes').setCustomValidity('');
+            }
+
+            function onInvalidCustom(idstr) {
+                var me = document.getElementById(idstr);
+                me.setCustomValidity('Số điện thoại không chính xác');
+                //me.setCustomValidity('');
+            }
+
+            function getCookie(cname) {
+                    var name = cname + "=";
+                    var ca = document.cookie.split(';');
+                    for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length,c.length);
+                        }
+                    }
+                    return "";
+            }
+                //alert(getCookie("_aff_network") + "|" + getCookie("_aff_sid"))
+                $("#aff_source").val(getCookie("_aff_network"));
+                $("#aff_sid").val(getCookie("_aff_sid"));
+            $(document).ready(function(){
+                $('input[name=email]').keyup(function() {
+                      this.value = this.value.toLowerCase();
+                    });
+              });
+
+            $(document).on('click', '.panel-heading span.clickable', function(e){
+                var $this = $(this);
+                if(!$this.hasClass('panel-collapsed')) {
+                    $this.parents('.panel').find('.panel-body').slideUp();
+                    $this.addClass('panel-collapsed');
+                    $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+                } else {
+                    $this.parents('.panel').find('.panel-body').slideDown();
+                    $this.removeClass('panel-collapsed');
+                    $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+                }
+            })
+
+        </script>
+
+        <script>
+            $(".inline").colorbox({inline:true, width:"50%"});
+        </script>
+    </body>
+
+</html>
