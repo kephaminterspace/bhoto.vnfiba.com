@@ -25,32 +25,19 @@ def static_from_root():
 @app.route("/", methods=['POST', 'GET'])
 def index():
     form = BankForm()
-    slbox_level_insurrance = select_box_by_list(LEVEL_INSURRANCE, form.level_insurrance.data, 'level_insurrance', 'level_insurrance', 'form-control styled', '',
-                                      'Chọn mức bảo hiểm')
-    slbox_number_persion = select_box_by_list(NUMBER_PERSION, form.number_persion.data, 'number_persion', 'number_persion', 'form-control styled', '',
-                                      'Số lượng người tham gia')
-
-    print()
-
     if request.method == 'POST':
         if form.validate_on_submit():
             data = {
                 "properties": [
-                    {"property":"identifier", "value":str(uuid.uuid4())},
-                    {"property":"firstname", "value":form.name.data},
-                    {"property":"lastname", "value":""},
-                    {"property":"email", "value":str(uuid.uuid4())+'@interspace.vn'},
-                    {"property":"phone", "value":form.phone.data},
-                    {"property":"hs_lead_status", "value":"NEW"},
-                    {"property":"level_insurrance", "value": int(form.level_insurrance.data)},
-                    {"property":"code_promotion", "value": form.code_promotion.data},
-                    {"property":"number_persion", "value":int(form.number_persion.data)},
-                    {"property":"aff_source", "value":form.aff_source.data},
-                    {"property":"aff_sid", "value":form.aff_sid.data},
+                    {"property": "firstname", "value": form.name.data},
+                    {"property": "phone", "value": form.phone.data},
+                    {"property": "car_type", "value": form.car_type.data},
+                    {"property": "year_make", "value": form.year_make.data},
+                    {"property": "code_promotion", "value": form.code_promotion.data},
+                    {"property": "hs_lead_status", "value": "NEW"}
                 ]
             }
-
-            url = "https://api.hubapi.com/contacts/v1/contact/?hapikey=533a6212-82d7-412a-9443-79507074efe7"
+            url = "https://api.hubapi.com/contacts/v1/contact/?hapikey=6a51ae32-e594-41f3-9c8b-f35401a1f4eb"
             header = {'Content-Type': 'application/json'}
             print json.dumps(data)
             res = requests.post(url=url, data=json.dumps(data), headers=header)
@@ -63,20 +50,16 @@ def index():
                     else:
                         form.email.errors.append(res_json["message"])
 
-                        return render_template('index.html', form=form, slbox_level_insurrance=slbox_level_insurrance,
-                                               slbox_number_persion=slbox_number_persion)
+                        return render_template('index.html', form=form)
                 else:
                     return render_template('thankyou.html')
 
             form.email.errors.append("Invalid data!")
-            return render_template('index.html', form=form, slbox_level_insurrance=slbox_level_insurrance,
-                                   slbox_number_persion=slbox_number_persion)
+            return render_template('index.html', form=form)
 
         else:
-            return render_template('index.html', form=form, slbox_level_insurrance=slbox_level_insurrance,
-                                   slbox_number_persion=slbox_number_persion)
+            return render_template('index.html', form=form)
 
-    return render_template('index.html', form=form, slbox_level_insurrance=slbox_level_insurrance,
-                               slbox_number_persion=slbox_number_persion)
+    return render_template('index.html', form=form)
 
 

@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="" id="target_gioi_thieu">
                     <div  class=" bao-hiem col-md-5">
-                        <h2 class="h-Bold">BẢO HIỂM BỆNH HIỂM NGHÈO</h2>
+                        <h2 class="h-Bold">BẢO HIỂM TOÀN DIỆN OTO</h2>
                         <p class="desc">Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim</p>
 
                     </div>
@@ -85,19 +85,19 @@
                                 <input type="text" name="name" {%if form.data.name%} value="{{form.data.name|safe}}" {%endif%} placeholder='Họ và tên' required oninvalid="setCustomValidity('Họ và tên là bắt buộc')" oninput="setCustomValidity('')"/>
                             </div>
                             <div class='control-group'>
-                                <input type="text" id="phone" name="phone" value={%if form.data.phone %} "{{form.data.phone|safe}}" {%else%} "" {%endif%} placeholder='Số điện thoại' required pattern="^[0-9]{10,12}$" oninvalid="setCustomValidity('Số điện thoại không chính xác')" oninput="setCustomValidity('')"/>
+                                <input type="text" id="phone" name="phone" {%if form.data.phone %} value="{{form.data.phone|safe}}" {%else%} value="" {%endif%} placeholder='Số điện thoại' required pattern="^[0-9]{10,12}$" oninvalid="setCustomValidity('Số điện thoại không chính xác')" oninput="setCustomValidity('')"/>
                             </div>
 
                             <div class="relative">
-                                 <input type="text" name="car_type" placeholder='Loại Xe'/>
+                                 <input type="text" name="car_type" {%if form.data.car_type%} value="{{form.data.car_type|safe}}" {%else%} value="" {%endif%} placeholder='Loại Xe' required oninvalid="setCustomValidity('Loại Xe là bắt buộc')" oninput="setCustomValidity('')"/>
                             </div>
                             <div class="relative">
-                                 <input type="text" name="year_make" placeholder='Năm sản xuất'/>
+                                 <input type="text" name="year_make" {%if form.data.year_make%} value="{{form.data.year_make|safe}}" {%else%} value="" {%endif%} placeholder='Năm sản xuất'/>
 
                             </div>
 
                             <div class='control-group'>
-                                <input type="text" name="code_promotion" value={%if form.data.code_promotion%} "{{form.data.code_promotion|safe}}" {%else%} "" {%endif%} placeholder='Mã xác thực'/>
+                                <input type="text" name="code_promotion" {%if form.data.code_promotion%} value="{{form.data.code_promotion|safe}}" {%else%} value="" {%endif%} placeholder='Mã xác thực'/>
                             </div>
                             <p>
                                   {%if form.toidongy.data%}
@@ -122,46 +122,43 @@
             <div class="row">
                 <div class="bg-tn" style="text-align:center; color: #fff; margin-top: 0px;">
                     <div class="sec-title">
-                        <h3 style="color: #fff;">
-                            <span>Mỗi năm ở Việt Nam có thêm</span>
-                            <p>hàng trăm ngàn người mắc những bệnh hiểm nghèo</p>
-                        </h3>
-                        <h3 style="color: #fff;"> </h3>
                     </div>
-                    <p class="mo-ta-tin">...như ung thư, đột quỵ, suy thận .. Những căn bệnh này đã trở nên phổ biến hơn và có thể xảy ra với bất kỳ ai. Ngày nay, với tiến bộ của y khoa và phương pháp điều trị, bệnh hiểm nghèo thật sự không phải là dấu chấm hết. Nếu được phát hiện sớm, nhiều người mắc bệnh hoàn toàn có thể hy vọng hồi phục và trở lại cuộc sống bình thường.</p>
-                    <p class="mo-ta-tin">Bảo hiểm bệnh hiểm nghèo của Tổng công ty cổ phần Bảo hiểm Bưu điện là sản phẩm bảo hiểm ĐẦU TIÊN tại thị trường bảo hiểm phi nhân thọ ở Việt Nam. Tham gia bảo hiểm bệnh hiểm nghèo của PTI, khách hàng sẽ được cung cấp nguồn tài chính kịp thời cho quá trình điều trị và đảm bảo kế hoạch tài chính cho bản thân và gia đình.</p>
+                    <p class="mo-ta-tin">Đây là hình thức bảo hiểm mà đơn vị bảo hiểm sẽ thanh toán những hạng mục chi phí phát sinh liên quan đến tổn thấtt thuộc phạm vi bảo hiểm.</p>
+                    <p class="mo-ta-tin">Đối tượng bảo hiểm là những thiệt hại vật chất của xe ô tô (không kinh doanh vận tải) được phép lưu hành theo quy định của pháp luật; Giá trị thực tế của xe cơ giới tại thời điểm tham gia bảo hiểm không thấp hơn 100 triệu đồng; Thời gian sử dụng (tính từ năm sản xuất đến năm tham gia bảo hiểm): không quá 15 năm.</p>
                     <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">Nhận tư vấn ngay</button></a></p>
                     <div class="clr"></div>
                 </div>
 
             </div>
+
+
             <div class="row text-center gioithieu">
                 <div class="col-md-3">
                     <img alt="" src="{{url_for('static', filename='images/icon1.png')}}">
                     <div class="content tinhnang" >
-                        <h4>Độ tuổi tham gia rộng từ 01 tuổi đến 60 tuổi</h4>
-                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                        <h4>PTI trực tiếp bảo lãnh thanh toán trong quá trình sửa chữa</h4>
+                        <p>Nhanh chóng đơn giản</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <img alt="" src="{{url_for('static', filename='images/icon2.png')}}">
                     <div class="content tinhnang">
-                        <h4>Phạm vi bảo vệ đến 14 bệnh hiểm nghèo</h4>
-                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                        <h4>Chủ xe có thể lựa chọn cơ sở sửa chữa chính hãng thuận tiện</h4>
+                        <p>trong hệ thống 484 gara liên kết trên toàn quốc</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
                     <div class="content tinhnang">
-                        <h4> Chi trả 100% số tiền bảo hiếm</h4>
-                        <p>Dịch vụ thông báo kết quả khoản vay trong vòng 24 giờ</p>
+                        <h4> Giám định tại chỗ theo yêu cầu của chủ xe</h4>
+                        <p>Chu đáo, tận tình</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <img alt="" src="{{url_for('static', filename='images/icon4.png')}}">
                     <div class="content tinhnang">
-                        <h4>Độ tuổi tham gia rộng từ 01 tuổi đến 60 tuổi</h4>
-                        <p>Lãi suất cạnh tranh, theo dư nợ giảm dần Số tiền Thanh Toán Đều Theo Tháng (TTĐTT) bằng nhau.</p>
+                        <h4>Top 3 nhà cung cấp dịch vụ bảo hiểm xe cơ giới trên thị trường</h4>
+                        <p>Mức phí tối ưu cạnh tranh trên thị trường</p>
                     </div>
                 </div>
             </div>
