@@ -71,16 +71,21 @@ body{
 
 .gioithieu{
     margin-top: 50px;
+    min-height: 180px;
 }
 
 .tinhnang h4 {
     text-transform: uppercase;
     color: #0082C5;
     font-size: 14px;
-    height: 30px;
+    text-align: center;
     font-weight: 600;
 }
-
+.tinhnang img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .sec-title.has-bg {
     padding: 15px 15px 0px 15px;
 }
@@ -224,4 +229,49 @@ input[type="text"], input[type="password"], input[type="tel"], input[type="numbe
 
 .sub-form{
     text-align: center;
+}
+
+.gioithieu_item{
+    float:left;
+    width:20%;
+}
+
+.copyright a{
+    color: #0284c4;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }

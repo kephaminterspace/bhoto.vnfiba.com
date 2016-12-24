@@ -11,7 +11,7 @@
         <script src="{{url_for('static', filename='js/jquery-1.10.1.min.js')}}"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-    <body>
+    <div>
 
         <nav class="navbar navbar-fixed-top navbar-default nav-custom ">
             <div class="container ">
@@ -62,8 +62,8 @@
             <div class="container">
                 <div class="" id="target_gioi_thieu">
                     <div  class=" bao-hiem col-md-5">
-                        <h2 class="h-Bold">BẢO HIỂM TOÀN DIỆN OTO</h2>
-                        <p class="desc">Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim</p>
+                        <!--<h2 class="h-Bold">BẢO HIỂM TOÀN DIỆN OTO</h2>-->
+                        <!--<p class="desc">Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim</p>-->
 
                     </div>
                     <div class="col-md-3">
@@ -123,152 +123,81 @@
                 <div class="bg-tn" style="text-align:center; color: #fff; margin-top: 0px;">
                     <div class="sec-title">
                     </div>
-                    <p class="mo-ta-tin">Đây là hình thức bảo hiểm mà đơn vị bảo hiểm sẽ thanh toán những hạng mục chi phí phát sinh liên quan đến tổn thấtt thuộc phạm vi bảo hiểm.</p>
-                    <p class="mo-ta-tin">Đối tượng bảo hiểm là những thiệt hại vật chất của xe ô tô (không kinh doanh vận tải) được phép lưu hành theo quy định của pháp luật; Giá trị thực tế của xe cơ giới tại thời điểm tham gia bảo hiểm không thấp hơn 100 triệu đồng; Thời gian sử dụng (tính từ năm sản xuất đến năm tham gia bảo hiểm): không quá 15 năm.</p>
+                    <p class="mo-ta-tin">Bằng cách nhấp vào "Đăng Ký Ngay" Quý khách đồng ý với điều khoản của ngân hàng EPTI. -> bỏ phần bôi vàng thay bằng: Tổng công ty cổ phần Bảo hiểm Bưu điện – PTI.</p>
+                    <p class="mo-ta-tin">Bỏ Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim - > thay bằng: Nhà cung cấp dịch vụ bảo hiểm xe cơ giới hàng đầu tại Việt Nam. Có cơ sở hạ tầng công nghệ thông tin số 1 với những tiện ích vượt trội: tính phí nhanh chóng, chuẩn xác, nhiều ưu đãi khi thanh toán trực tuyến, hỗ trợ mọi hình thức thanh toán online…</p>
                     <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">Nhận tư vấn ngay</button></a></p>
                     <div class="clr"></div>
                 </div>
 
             </div>
 
-
-            <div class="row text-center gioithieu">
-                <div class="col-md-3">
-                    <img alt="" src="{{url_for('static', filename='images/icon1.png')}}">
+            <div class="row">
+                <div class="col-md-5ths col-xs-6">
+                    <div class="content tinhnang">
+                        <img alt="" src="{{url_for('static', filename='images/icon1.png')}}">
+                        <h4>Chủ xe có thể lựa chọn cơ sở sửa chữa chính hãng thuận tiện trong hệ thống 484 gara liên kết trên toàn quốc</h4>
+                    </div>
+                </div>
+                <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang" >
+                        <img alt="" src="{{url_for('static', filename='images/icon2.png')}}">
                         <h4>PTI trực tiếp bảo lãnh thanh toán trong quá trình sửa chữa</h4>
-                        <p>Nhanh chóng đơn giản</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <img alt="" src="{{url_for('static', filename='images/icon2.png')}}">
+                <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang">
-                        <h4>Chủ xe có thể lựa chọn cơ sở sửa chữa chính hãng thuận tiện</h4>
-                        <p>trong hệ thống 484 gara liên kết trên toàn quốc</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
-                    <div class="content tinhnang">
+                        <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
                         <h4> Giám định tại chỗ theo yêu cầu của chủ xe</h4>
-                        <p>Chu đáo, tận tình</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <img alt="" src="{{url_for('static', filename='images/icon4.png')}}">
+                <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang">
+                        <img alt="" src="{{url_for('static', filename='images/icon4.png')}}">
+                        <h4> Mức phí tối ưu cạnh tranh trên thị trường</h4>
+                    </div>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="content tinhnang">
+                        <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
                         <h4>Top 3 nhà cung cấp dịch vụ bảo hiểm xe cơ giới trên thị trường</h4>
-                        <p>Mức phí tối ưu cạnh tranh trên thị trường</p>
                     </div>
                 </div>
             </div>
+
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#" >
-            <div class="sec-title has-bg" id="target_quyen_loi">
-                <h3>Quyền lợi</h3>
-            </div>
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img1.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content1">
-                                    <img  src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
+            <div class="row" style="margin-top:0px;">
+                <div class="col-md-12">
+                     <div class="sec-title has-bg" id="target_quyen_loi">
+                        <h3>Quyền lợi</h3>
                     </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content1"> CÁC BỆNH HIỂM NGHÈO ĐƯỢC BẢO HIỂM</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img2.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content2">
-                                    <img src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content2">SỐ TIỀN BÀO HIỂM</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img3.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content3">
-                                    <img src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content3">PHẠM VI BẢO HIỂM</a>
-                    </div>
-                </div>
+                    <p style="font-size:20px;">PTI thay mặt chủ xe thanh toán các khoản chi phí liên quan thuộc phạm vi bảo hiểm khi tổn thất xẩy ra, cụ thể:</p>
+                    <h4><strong>Quyền lợi cơ bản</strong></h4>
+                    <p>
+                    &nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspĐâm, va, lật, đổ.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspHoả hoạn, cháy, nổ.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspNhững tai nạn bất khả kháng do thiên nhiên: Bão, lũ lụt, sét đánh, sụt lở.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspVật thể từ bên ngoài xe tác động lên xe.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspMất cắp, mất cướp toàn bộ xe.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspTai nạn do rủi ro bất ngờ khác gây nên ngoài những điểm loại trừ quy định tại Điều 9 và Điều 15, Quy tắc bảo hiểm tự nguyện xe ô tô.
+                    </p>
+                    <h4><strong>Ngoài ra PTI còn hỗ trợ những chi phí cần thiết và hợp lý nhằm:</strong></h4>
+                    <p>
+                    &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspNgăn ngừa, hạn chế tổn thất phát sinh thêm;
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspChi phí đưa xe thiệt hại tới nơi sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng (trừ trường hợp có thỏa thuận khác bằng văn bản).
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspGiám định tổn thất.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspTrong mọi trường hợp tổng số tiền bồi thường của PTI (không bao gồm chi phí giám định tổn thất) không vượt quá số tiền bảo hiểm đã ghi trên Giấy chứng nhận bảo hiểm.
+                    </p>
+                    <h4><strong>Quyền lợi bổ sung</strong></h4>
+                    <p>
+                    &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung “không trừ khấu hao” khi tổn thất bộ phận (điều khoản mới thay cũ): nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ trả tiền bồi thường toàn bộ giá trị thực tế của các bộ phận bị hư hỏng cần phải thay thế thuộc phạm vi bảo hiểm mà không trừ phần hao mòn (khấu hao) sử dụng.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung lựa chọn cơ sở sửa chữa: khi xe bị thiệt hại, nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm sẽ được lựa chọn cơ sở sửa chữa được uỷ quyền của Hãng sản xuất ra chiếc xe đó trong lãnh thổ nước Cộng hoà xã hội chủ nghĩa Việt Nam. Chi phí cẩu, kéo xe do PTI chi trả tính từ nơi xảy ra tai nạn đến cơ sở sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung bảo hiểm thủy kích: nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ thanh toán 80% số tiền bồi thường để sửa chữa, khắc phục những thiệt hại của động cơ xe do đi vào vùng ngập nước và/hoặc vì có nước lọt vào trong động cơ gây ra hiện tượng thuỷ kích làm hư hỏng động cơ.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBảo lãnh thanh toán: Khi đưa xe vào gara sửa chữa, nếu xe nằm trong "Danh sách gara liên kết sửa chữa của PTI", Khách hàng sẽ được PTI bảo lãnh thanh toán chi phí sửa chữa thuộc trách nhiệm của PTI. Trái lại, Khách hàng phải tự thanh toán trước chi phí sửa chữa, sau đó hoàn thiện hồ sơ để PTI chi trả bồi thường sau.
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspGiám định tại địa điểm theo yêu cầu của khách hàng: Khi nhận yêu cầu giám định của khách hàng, PTI sẽ có mặt tại địa điểm theo yêu cầu để tiến hành giám định
+                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung cứu hộ xe bị sự cố kỹ thuật miễn phí: nếu chủ xe tham gia bảo hiểm vật chất xe (Xe ôtô chở người đến ≤ 24 chỗ) gặp sự cố kỹ thuật trên phạm vi 100km tính từ bưu điện trung tâm tại thành phố Hà Nội, thành phố Đà Nẵng, thành phố Hồ Chí Minh và nội thành thành phố Hải Phòng sẽ được cẩu kéo miễn phí tới cơ sở sửa chữa gần nhất</p>
 
             </div>
-
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img5.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content5">
-                                    <img  src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content5">QUYỀN LỢI BẢO HIỂM BỔ SUNG THỦY KÍCH</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img6.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content6">
-                                    <img src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content6">BẢO LÃNH THANH TOÁN</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="tienich-info">
-                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img7.png')}}" alt="">
-                        <div class="overlay">
-                            <div class="box-holder">
-                                <a class="box inline" href="#inline_content7">
-                                    <img src="{{url_for('static', filename='images/click.png')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-title text-center">
-                        <a class="inline" href="#inline_content7">GIÁM ĐỊNH TẠI ĐỊA ĐIỂM THEO YÊU CẦU CỦA KHÁCH HÀNG</a>
-                    </div>
-                </div>
-
-            </div>
+        </div>
 
 
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
@@ -292,48 +221,27 @@
                </div>
             </div>
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
-            <div class="sec-title has-bg" id="target_thong_tin">
-                <h3>Thông tin cần thiết</h3>
-            </div>
-            <!--<img class="img-thongtin" src="images/img4.png"  alt="#">-->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <!--<li data-target="#myCarousel" data-slide-to="1" class=""></li>-->
-                    <!--<li data-target="#myCarousel" data-slide-to="2" class=""></li>-->
-                </ol>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="{{url_for('static', filename='images/img4.png')}}" alt="Chania">
-                        <div class="carousel-caption">
-                            <h3>Quy tắc bảo hiểm</h3>
-                            <p><strong>Công ty bảo hiểm:</strong> là Tổng công ty
-                                Cổ phần Bảo hiểm Bưu điện và các
-                                Công ty thành viên, sau đây gọi tắt là
-                                PTI.</p>
-                            <p>
-                                <a  href="https://www.epti.vn/upload/Sanpham/QuyTac-BH%20BenhHiemNgheo%20(2).pdf" target="_blank">
-                                    <button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">xem chi tiết</button>
-                                </a>
-                            </p>
-                        </div>
+
+            <div class="row" style="margin-top:0px;">
+                <div class="col-md-12">
+                     <div class="sec-title has-bg" id="target_thong_tin">
+                        <h3>Thông tin cần biết</h3>
                     </div>
+                    <p style="font-size:20px;">Khi phát sinh tai nạn, Quý khách vui lòng thông báo ngay cho PTI qua số tổng đài dịch vụ khách hàng 24/7: 1900 545475.</p>
+                    <h4><strong>Hồ sơ bồi thường bao gồm các giấy tờ sau:</strong></h4>
+                    <p>
+                        &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspThông báo tai nạn và yêu cầu bồi thường
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản án hoặc Quyết định của Toà án (nếu có).
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspTrường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBiên bản giám định thiệt hại, ảnh chụp thiệt hại.
+<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspCác chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)
+                    </p>
                 </div>
+            </div>
 
-            </div>
-            <div class="text-center su-menh">
-                <div class="sec-title">
-                    <h3 style="">
-                        sứ mệnh của chúng tôi là mang đến an sinh xã hội
-                    </h3>
-                </div>
-                <p>Bạn cần hiểu thêm thông tin về sản phẩm dịch vụ của Bảo hiểm PTI, Hãy trò chuyện cùng chúng tôi! Liên hệ với chúng tôi để được tư vấn!</p>
-                <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">nhận tư vấn ngay</button></a></p>
-                <div class="clr"></div>
-            </div>
 
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
             <div id="target_cau_hoi_thuong_gap">
@@ -344,26 +252,26 @@
                     <div class="">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Khi nào thì tôi được PTI bồi thường? Và sẽ thông báo cho ai khi cần?</h3>
+                                <h3 class="panel-title">Khi xảy ra sự cố tôi phải làm gì?</h3>
                                 <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                             </div>
-                            <div class="panel-body" style="display: none;">PTI chi trả bảo hiểm khi khách hàng mắc bệnh lần đầu tiên 1 trong những bệnh hiểm nghèo có ghi trong Hợp đồng bảo hiểm. Khi phát hiện căn bệnh, khách hành sẽ gọi đến Insmart (04 3772 8106 - 08 39290256) hoặc Hotline PTI - 1900 545475 để được hướng dẫn chi tiết hơn.</div>
+                            <div class="panel-body" style="display: none;">Bạn cần cố gắng giữ nguyên hiện trường và báo ngay hotline 1900 545475, PTI tới giám định, xử lý giúp bạn trong vòng 30 phút. PTI là đơn vị bảo hiểm duy nhất tại Việt Nam có hệ thống call center trực 24/7.</div>
                         </div>
 
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Khi tham gia bảo hiểm bệnh hiểm nghèo tôi có phải đi khám bệnh trước đó không? Hoặc yêu cầu gửi hồ sơ bác sĩ</h3>
+                                <h3 class="panel-title">Xe tôi mới mua và muốn được vào chính hãng để sửa chữa? PTI có hỗ trợ?</h3>
                                 <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                             </div>
-                            <div class="panel-body" style="display: none;">KH không cần đi khám bênh trước khi tham gia bảo hiểm bệnh hiểm nghèo tại PTI</div>
+                            <div class="panel-body" style="display: none;">Quý khách hàng sử dụng xe trong 5 năm đầu tiên sẽ được toàn quỳên lựa chọn xưởng chính hãng. Anh chị liên hệ tư vấn viên vào số 0473005678 để được hỗ trợ thêm</div>
                         </div>
 
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Thời gian tôi nhận được tiền bồi thường là bao nhiêu lâu?</h3>
+                                <h3 class="panel-title">Khi thay thế phụ tùng tôi có được thay mới?</h3>
                                 <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                             </div>
-                            <div class="panel-body" style="display: none;">Sau 30 ngày chờ từ khi có kết luận của Bác sĩ</div>
+                            <div class="panel-body" style="display: none;">Đối với những tổn thất trên 75%, PTI sẽ thay mới  bộ phận không tính hao mòn.</div>
                         </div>
                     </div>
                 </div>
@@ -371,10 +279,16 @@
             <footer class="main-wrapper footer">
                 <div class="container bottom">
                     <div class="fl copyright">
-                        <p><strong>Tổng Công Ty Bảo Hiểm Bưu Điện – PTI</strong></p>
-                        <p>Website: <a href="https://www.pti.vn/">www.pti.com.vn</a></p>
-                        <p>Bảo hiểm TRỰC TUYẾN: <a href="https://www.epti.vn/">www.epti.vn</a></p>
-                        <p>Hotline: <strong>1900 54 54 75</strong></p>
+                        <p><strong>Tổng Công ty Cổ phần Bảo hiểm Bưu điện - PTI</strong></p>
+                        <p>Tầng 8 toà nhà Harec – 4A Láng Hạ, Ba Đình, Hà Nội</p>
+                        <p>Website: <a href="https://www.epti.vn">www.epti.vn – www.pti.com.vn</a></p>
+                        <p>Fanpage: <a href="www.facebook.com/Bao.Hiem.Truc.Tuyen.PTI">www.facebook.com/Bao.Hiem.Truc.Tuyen.PTI</a></p>
+                        <p>Youtube: <a href="www.youtube.com/channel/UCn6RoUGGaZFevhoFnEMoRCg">www.youtube.com/channel/UCn6RoUGGaZFevhoFnEMoRCg</a></p>
+                        <p><strong>Call Center:</strong> 1900 454575</p>
+                        <p><strong>Hotline:</strong> 08 7304 567804 7300 5678</p>
+                        <p><strong>Điện thoại:</strong> (+844) 3772 4466</p>
+                        <p><strong>Fax:</strong> (+844) 3772 4460</p>
+                        <p><strong>Email:</strong> info@pti.com.vn</p>
                         </div>
                     <nav>
                         <ul style="margin:0px;">
