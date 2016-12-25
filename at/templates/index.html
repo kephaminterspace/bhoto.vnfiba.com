@@ -11,7 +11,7 @@
         <script src="{{url_for('static', filename='js/jquery-1.10.1.min.js')}}"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-    <div>
+    <body>
 
         <nav class="navbar navbar-fixed-top navbar-default nav-custom ">
             <div class="container ">
@@ -60,11 +60,8 @@
         </nav>
         <div class="banner">
             <div class="container">
-                <div class="" id="target_gioi_thieu">
+                <div>
                     <div  class=" bao-hiem col-md-5">
-                        <!--<h2 class="h-Bold">BẢO HIỂM TOÀN DIỆN OTO</h2>-->
-                        <!--<p class="desc">Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim</p>-->
-
                     </div>
                     <div class="col-md-3">
                     </div>
@@ -117,7 +114,7 @@
         </div>
         <!--<img class="img-banner" src="images/slider.png"  alt="#">-->
 
-        <div class="container" id="target_loi_ich">
+        <div class="container" id="target_gioi_thieu">
             <!--<img class="img-gioithieu" src="images/gioithieu-bg.png"  alt="#">-->
             <div class="row">
                 <div class="bg-tn" style="text-align:center; color: #fff; margin-top: 0px;">
@@ -131,7 +128,7 @@
 
             </div>
 
-            <div class="row">
+            <div class="row" id="target_loi_ich">
                 <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang">
                         <img alt="" src="{{url_for('static', filename='images/icon1.png')}}">
@@ -158,47 +155,66 @@
                 </div>
                 <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang">
-                        <img alt="" src="{{url_for('static', filename='images/icon3.png')}}">
+                        <img alt="" src="{{url_for('static', filename='images/icon4a.png')}}">
                         <h4>Top 3 nhà cung cấp dịch vụ bảo hiểm xe cơ giới trên thị trường</h4>
                     </div>
                 </div>
             </div>
 
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#" >
-            <div class="row" style="margin-top:0px;">
-                <div class="col-md-12">
-                     <div class="sec-title has-bg" id="target_quyen_loi">
-                        <h3>Quyền lợi</h3>
+            <div class="sec-title has-bg" id="target_quyen_loi">
+                <h3>PTI thay mặt chủ xe thanh toán các khoản chi phí liên quan thuộc phạm vi bảo hiểm khi tổn thất xẩy ra, cụ thể</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img1.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content1">
+                                    <img  src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <p style="font-size:20px;">PTI thay mặt chủ xe thanh toán các khoản chi phí liên quan thuộc phạm vi bảo hiểm khi tổn thất xẩy ra, cụ thể:</p>
-                    <h4><strong>Quyền lợi cơ bản</strong></h4>
-                    <p>
-                    &nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspĐâm, va, lật, đổ.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspHoả hoạn, cháy, nổ.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspNhững tai nạn bất khả kháng do thiên nhiên: Bão, lũ lụt, sét đánh, sụt lở.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspVật thể từ bên ngoài xe tác động lên xe.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspMất cắp, mất cướp toàn bộ xe.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>+</strong>&nbsp&nbspTai nạn do rủi ro bất ngờ khác gây nên ngoài những điểm loại trừ quy định tại Điều 9 và Điều 15, Quy tắc bảo hiểm tự nguyện xe ô tô.
-                    </p>
-                    <h4><strong>Ngoài ra PTI còn hỗ trợ những chi phí cần thiết và hợp lý nhằm:</strong></h4>
-                    <p>
-                    &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspNgăn ngừa, hạn chế tổn thất phát sinh thêm;
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspChi phí đưa xe thiệt hại tới nơi sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng (trừ trường hợp có thỏa thuận khác bằng văn bản).
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspGiám định tổn thất.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspTrong mọi trường hợp tổng số tiền bồi thường của PTI (không bao gồm chi phí giám định tổn thất) không vượt quá số tiền bảo hiểm đã ghi trên Giấy chứng nhận bảo hiểm.
-                    </p>
-                    <h4><strong>Quyền lợi bổ sung</strong></h4>
-                    <p>
-                    &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung “không trừ khấu hao” khi tổn thất bộ phận (điều khoản mới thay cũ): nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ trả tiền bồi thường toàn bộ giá trị thực tế của các bộ phận bị hư hỏng cần phải thay thế thuộc phạm vi bảo hiểm mà không trừ phần hao mòn (khấu hao) sử dụng.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung lựa chọn cơ sở sửa chữa: khi xe bị thiệt hại, nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm sẽ được lựa chọn cơ sở sửa chữa được uỷ quyền của Hãng sản xuất ra chiếc xe đó trong lãnh thổ nước Cộng hoà xã hội chủ nghĩa Việt Nam. Chi phí cẩu, kéo xe do PTI chi trả tính từ nơi xảy ra tai nạn đến cơ sở sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung bảo hiểm thủy kích: nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ thanh toán 80% số tiền bồi thường để sửa chữa, khắc phục những thiệt hại của động cơ xe do đi vào vùng ngập nước và/hoặc vì có nước lọt vào trong động cơ gây ra hiện tượng thuỷ kích làm hư hỏng động cơ.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBảo lãnh thanh toán: Khi đưa xe vào gara sửa chữa, nếu xe nằm trong "Danh sách gara liên kết sửa chữa của PTI", Khách hàng sẽ được PTI bảo lãnh thanh toán chi phí sửa chữa thuộc trách nhiệm của PTI. Trái lại, Khách hàng phải tự thanh toán trước chi phí sửa chữa, sau đó hoàn thiện hồ sơ để PTI chi trả bồi thường sau.
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspGiám định tại địa điểm theo yêu cầu của khách hàng: Khi nhận yêu cầu giám định của khách hàng, PTI sẽ có mặt tại địa điểm theo yêu cầu để tiến hành giám định
-                    <br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspQuyền lợi bổ sung cứu hộ xe bị sự cố kỹ thuật miễn phí: nếu chủ xe tham gia bảo hiểm vật chất xe (Xe ôtô chở người đến ≤ 24 chỗ) gặp sự cố kỹ thuật trên phạm vi 100km tính từ bưu điện trung tâm tại thành phố Hà Nội, thành phố Đà Nẵng, thành phố Hồ Chí Minh và nội thành thành phố Hải Phòng sẽ được cẩu kéo miễn phí tới cơ sở sửa chữa gần nhất</p>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content1">QUYỀN LỢI CƠ BẢN</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img2.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content2">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content2">HỖ TRỢ NHỮNG CHI PHÍ CẦN THIẾT VÀ HỢP LÝ</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tienich-info">
+                        <img class="img-quyenloi"  src="{{url_for('static', filename='images/img3.png')}}" alt="">
+                        <div class="overlay">
+                            <div class="box-holder">
+                                <a class="box inline" href="#inline_content3">
+                                    <img src="{{url_for('static', filename='images/click.png')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-title text-center">
+                        <a class="inline" href="#inline_content3">QUYỀN LỢI BỔ SUNG</a>
+                    </div>
+                </div>
 
             </div>
-        </div>
-
 
             <img class="img-gioithieu" src="{{url_for('static', filename='images/t-bg.png')}}"  alt="#">
 
@@ -226,19 +242,89 @@
             <div class="row" style="margin-top:0px;">
                 <div class="col-md-12">
                      <div class="sec-title has-bg" id="target_thong_tin">
-                        <h3>Thông tin cần biết</h3>
+                        <h3>Khi phát sinh tai nạn, Quý khách vui lòng thông báo ngay cho PTI qua số tổng đài dịch vụ khách hàng 24/7: 1900 545475.</h3>
                     </div>
-                    <p style="font-size:20px;">Khi phát sinh tai nạn, Quý khách vui lòng thông báo ngay cho PTI qua số tổng đài dịch vụ khách hàng 24/7: 1900 545475.</p>
-                    <h4><strong>Hồ sơ bồi thường bao gồm các giấy tờ sau:</strong></h4>
-                    <p>
-                        &nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspThông báo tai nạn và yêu cầu bồi thường
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản án hoặc Quyết định của Toà án (nếu có).
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspTrường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBiên bản giám định thiệt hại, ảnh chụp thiệt hại.
-<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspCác chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)
-                    </p>
+                <h4>Hồ sơ bồi thường bao gồm các giấy tờ sau:</h4>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="6" class=""></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="{{url_for('static', filename='images/slide/1.jpg')}}" alt="Chania">
+                        <div class="carousel-caption">
+                            <p>Thông báo tai nạn và yêu cầu bồi thường</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/2.jpg')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>Bản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/3.png')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>Bản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…
+Bản án hoặc Quyết định của Toà án (nếu có).</p>
+                        </div>
+                    </div>
+
+                     <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/4.jpg')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>Bản án hoặc Quyết định của Toà án (nếu có).</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/5.jpg')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>rường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/6.jpg')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>Biên bản giám định thiệt hại, ảnh chụp thiệt hại.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/slide/7.jpg')}}" alt="">
+                        <div class="carousel-caption">
+                            <p>Các chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+                    <!--<p style="font-size:20px;">Khi phát sinh tai nạn, Quý khách vui lòng thông báo ngay cho PTI qua số tổng đài dịch vụ khách hàng 24/7: 1900 545475.</p>-->
+                    <!--<h4><strong>Hồ sơ bồi thường bao gồm các giấy tờ sau:</strong></h4>-->
+                    <!--<p>-->
+                        <!--&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspThông báo tai nạn và yêu cầu bồi thường-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBản án hoặc Quyết định của Toà án (nếu có).-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspTrường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspBiên bản giám định thiệt hại, ảnh chụp thiệt hại.-->
+<!--<br>&nbsp&nbsp&nbsp&nbsp<strong>-</strong>&nbsp&nbspCác chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)-->
+                    <!--</p>-->
                 </div>
             </div>
 
@@ -307,57 +393,47 @@
                 <!-- This contains the hidden content for inline calls -->
                 <div style='display:none'>
                     <div id='inline_content1' style='padding:10px; background:#fff;'>
-                        <h3 style="text-align:center; "><strong>Các bệnh hiểm nghèo được bảo hiểm</strong></h3>
+                        <h3 style="text-align:center; "><strong>Quyền lợi cơ bản</strong></h3>
                         <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
                         <p>
-                            <br>1 : Nhồi máu cơ tim lần đầu
-                            <br>2 : Đột quỵ
-                            <br>3 : Ung thư
-                            <br>4 : Suy thận
-                            <br>5 : Liệt vĩnh viễn các chi
-                        </p>
-                        <p>
-                            Cứ mỗi năm tái tục, Người được bảo hiểm sẽ được bổ sung  một (01) bệnh hiểm nghèo vào Danh sách bệnh hiểm nghèo được bảo hiểm theo. Cụ thể:
-                            <br>Năm tái tục thứ 1 : U não lành tính
-                            <br>Năm tái tục thứ 2 : Phẫu thuật thông động mạch vành
-                            <br>Năm tái tục thứ 3 : Cấy ghép nội tạng
-                            <br>Năm tái tục thứ 4 : Đa xơ cứng
-                            <br>Năm tái tục thứ 5 : Phẫu thuật ghép động mạch chủ
-                            <br>Năm tái tục thứ 6 : Tăng huyết áp động mạch phổi
-                            <br>Năm tái tục thứ 7 : Thay thế van tim
-                            <br>Năm tái tục thứ 8 : Bệnh Parkinson
-                            <br>Năm tái tục thứ 9 : Bệnh gan giai đoạn cuối
-                            <br>Chi trả 100% Số tiền bảo hiểm khi không may mắc phải Bệnh hiểm nghèo (theo danh sách như trên) xuất hiện lần đầu theo chẩn đoán của bác sỹ trong thời hạn bảo hiểm
+                            <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Đâm, va, lật, đổ.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Hoả hoạn, cháy, nổ.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Những tai nạn bất khả kháng do thiên nhiên: Bão, lũ lụt, sét đánh, sụt lở.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Vật thể từ bên ngoài xe tác động lên xe.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Mất cắp, mất cướp toàn bộ xe.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Tai nạn do rủi ro bất ngờ khác gây nên ngoài những điểm loại trừ quy định tại Điều 9 và Điều 15, Quy tắc bảo hiểm tự nguyện xe ô tô.
                         </p>
                     </div>
                 </div>
 
                 <div style='display:none'>
                     <div id='inline_content2' style='padding:10px; background:#fff;'>
-                        <h3 style="text-align:center; "><strong>Số tiền bảo hiểm</strong></h3>
+                        <h3 style="text-align:center; "><strong>Ngoài ra PTI còn hỗ trợ những chi phí cần thiết và hợp lý nhằm</strong></h3>
                         <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
                         <p>
-                            <br>Lựa chọn 1: 110,000,000 VND/ người/ năm
-                            <br>Lựa chọn 2: 220,000,000 VND/ người/ năm
-                            <br>Lựa chọn 3: 330,000,000 VND/ người/ năm
+                            <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Ngăn ngừa, hạn chế tổn thất phát sinh thêm;
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Chi phí đưa xe thiệt hại tới nơi sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng (trừ trường hợp có thỏa thuận khác bằng văn bản).
+                            <br><span class="glyphicon glyphicon-ok"></span> &nbsp&nbsp Giám định tổn thất.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Trong mọi trường hợp tổng số tiền bồi thường của PTI (không bao gồm chi phí giám định tổn thất) không vượt quá số tiền bảo hiểm đã ghi trên Giấy chứng nhận bảo hiểm.
                         </p>
                     </div>
                 </div>
 
                 <div style='display:none'>
                     <div id='inline_content3' style='padding:10px; background:#fff;'>
-                        <h3 style="text-align:center; "><strong>Phạm vi bảo hiểm</strong></h3>
+                        <h3 style="text-align:center; "><strong>Quyền lợi bổ sung</strong></h3>
                         <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
                         <br>
                         <p>
-                            <br>Trường hợp Người được bảo hiểm mắc phải bệnh hiểm nghèo trong thời hạn bảo hiểm, PTI sẽ chi trả toàn bộ số tiền bảo hiểm được nêu cụ thể trong Hợp đồng với điều kiện sau:
-                            <br>a. Bệnh hiểm nghèo xuất hiện lần đầu đối với Người được bảo hiểm theo chẩn đoán của bác sỹ, và
-                            <br>b. Người được bảo hiểm còn sống ít nhất 30 ngày kể từ ngày kết luận của bác sỹ.
-                            <br>Hợp đồng bảo hiểm sẽ kết thúc sau khi Người được bảo hiểm nhận được số tiền bồi thường và không tái tục cho những năm sau.
+                           <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Quyền lợi bổ sung “không trừ khấu hao” khi tổn thất bộ phận (điều khoản mới thay cũ): nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ trả tiền bồi thường toàn bộ giá trị thực tế của các bộ phận bị hư hỏng cần phải thay thế thuộc phạm vi bảo hiểm mà không trừ phần hao mòn (khấu hao) sử dụng.
+                           <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Quyền lợi bổ sung lựa chọn cơ sở sửa chữa: khi xe bị thiệt hại, nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm sẽ được lựa chọn cơ sở sửa chữa được uỷ quyền của Hãng sản xuất ra chiếc xe đó trong lãnh thổ nước Cộng hoà xã hội chủ nghĩa Việt Nam. Chi phí cẩu, kéo xe do PTI chi trả tính từ nơi xảy ra tai nạn đến cơ sở sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Quyền lợi bổ sung bảo hiểm thủy kích: nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ thanh toán 80% số tiền bồi thường để sửa chữa, khắc phục những thiệt hại của động cơ xe do đi vào vùng ngập nước và/hoặc vì có nước lọt vào trong động cơ gây ra hiện tượng thuỷ kích làm hư hỏng động cơ.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Bảo lãnh thanh toán: Khi đưa xe vào gara sửa chữa, nếu xe nằm trong "Danh sách gara liên kết sửa chữa của PTI", Khách hàng sẽ được PTI bảo lãnh thanh toán chi phí sửa chữa thuộc trách nhiệm của PTI. Trái lại, Khách hàng phải tự thanh toán trước chi phí sửa chữa, sau đó hoàn thiện hồ sơ để PTI chi trả bồi thường sau.
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Giám định tại địa điểm theo yêu cầu của khách hàng: Khi nhận yêu cầu giám định của khách hàng, PTI sẽ có mặt tại địa điểm theo yêu cầu để tiến hành giám định
+                            <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Quyền lợi bổ sung cứu hộ xe bị sự cố kỹ thuật miễn phí: nếu chủ xe tham gia bảo hiểm vật chất xe (Xe ôtô chở người đến ≤ 24 chỗ) gặp sự cố kỹ thuật trên phạm vi 100km tính từ bưu điện trung tâm tại thành phố Hà Nội, thành phố Đà Nẵng, thành phố Hồ Chí Minh và nội thành thành phố Hải Phòng sẽ được cẩu kéo miễn phí tới cơ sở sửa chữa gần nhất
                         </p>
                     </div>
                 </div>
-
             </footer>
 
             <div id="back-top-wrapper" class="visible-lg">
