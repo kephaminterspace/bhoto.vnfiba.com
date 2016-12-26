@@ -58,10 +58,12 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="banner">
+        <div class="banner" id="target_gioi_thieu">
             <div class="container">
                 <div>
                     <div  class=" bao-hiem col-md-5">
+                        <h2 class="h-Bold">BẢO HIỂM TOÀN DIỆN OTÔ</h2>
+                        <p class="desc">Nhà cung cấp dịch vụ bảo hiểm xe cơ giới hàng đầu tại Việt Nam. Có cơ sở hạ tầng công nghệ thông tin số 1 với những tiện ích vượt trội: tính phí nhanh chóng, chuẩn xác, nhiều ưu đãi khi thanh toán trực tuyến, hỗ trợ mọi hình thức thanh toán online…</p>
                     </div>
                     <div class="col-md-3">
                     </div>
@@ -102,7 +104,7 @@
                                 {%else%}
                                 <input type="checkbox" id="toidongy1" name="toidongy" required oninvalid="setCustomValidity('Bạn phải đồng ý với điều khoản này')" onchange="setCustomValidity('')"/>
                                 {%endif%}
-                                Bằng cách nhấp vào "Đăng Ký Ngay" Quý khách đồng ý với điều khoản của ngân hàng EPTI.</p>
+                                Bằng cách nhấp vào "Đăng Ký Ngay" Quý khách đồng ý với điều khoản của Tổng công ty cổ phần Bảo hiểm Bưu điện – PTI.</p>
                             <button type="submit" value="Register Now" class='btn submit sub-form' name="submit">Đăng ký ngay</button>
                         </form>
 
@@ -114,20 +116,7 @@
         </div>
         <!--<img class="img-banner" src="images/slider.png"  alt="#">-->
 
-        <div class="container" id="target_gioi_thieu">
-            <!--<img class="img-gioithieu" src="images/gioithieu-bg.png"  alt="#">-->
-            <div class="row">
-                <div class="bg-tn" style="text-align:center; color: #fff; margin-top: 0px;">
-                    <div class="sec-title">
-                    </div>
-                    <p class="mo-ta-tin">Bằng cách nhấp vào "Đăng Ký Ngay" Quý khách đồng ý với điều khoản của ngân hàng EPTI. -> bỏ phần bôi vàng thay bằng: Tổng công ty cổ phần Bảo hiểm Bưu điện – PTI.</p>
-                    <p class="mo-ta-tin">Bỏ Công ty đầu tiên cho ra mắt sản phẩm bệnh hiểm nghèo với 14 bệnh nan y (bao gồm cả Ung Thư Suy Thận; Liệt Các Chi; Đột Quỵ và Ngồi Máu Cơ Tim - > thay bằng: Nhà cung cấp dịch vụ bảo hiểm xe cơ giới hàng đầu tại Việt Nam. Có cơ sở hạ tầng công nghệ thông tin số 1 với những tiện ích vượt trội: tính phí nhanh chóng, chuẩn xác, nhiều ưu đãi khi thanh toán trực tuyến, hỗ trợ mọi hình thức thanh toán online…</p>
-                    <p><a href="#top"><button type="submit" value="Register Now" class="btn submit sub-form" name="submit" style=" background: #ffc900; margin: 15px auto; border-radius: 5px; width: 230px; box-shadow: 0 3px 0 #d37f00;">Nhận tư vấn ngay</button></a></p>
-                    <div class="clr"></div>
-                </div>
-
-            </div>
-
+        <div class="container" >
             <div class="row" id="target_loi_ich">
                 <div class="col-md-5ths col-xs-6">
                     <div class="content tinhnang">
@@ -273,17 +262,16 @@
                         <img src="{{url_for('static', filename='images/slide/2.jpg')}}" alt="">
                         </a>
                         <div class="carousel-caption">
-                            <p>Bản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.</p>
+                            <p>Bản sao các giấy tờ...<a class="box inline" href="#slide_detail1" style="color:#ffffff;"><strong>chi tiết</strong></a></p>
                         </div>
                     </div>
 
                     <div class="item">
                         <a href="https://www.epti.vn/bao-hiem-o-to/vip-autocare-bao-hiem-toan-dien-o-to-i1.htm#tabs-3" target="_blank">
-                        <img src="{{url_for('static', filename='images/slide/3.png')}}" alt="">
+                        <img src="{{url_for('static', filename='images/slide/10.jpg')}}" alt="">
                         </a>
                         <div class="carousel-caption">
-                            <p>Bản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…
-Bản án hoặc Quyết định của Toà án (nếu có).</p>
+                            <p>Bản kết luận điều tra...<a class="box inline" href="#slide_detail2" style="color:#ffffff;"><strong>chi tiết</strong></a></p>
                         </div>
                     </div>
 
@@ -301,7 +289,7 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                         <img src="{{url_for('static', filename='images/slide/5.jpg')}}" alt="">
                         </a>
                         <div class="carousel-caption">
-                            <p>rường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.
+                            <p>Trường hợp tổn thất do...<a class="box inline" href="#slide_detail3" style="color:#ffffff;"><strong>chi tiết</strong></a>
                             </p>
                         </div>
                     </div>
@@ -320,7 +308,7 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                         <img src="{{url_for('static', filename='images/slide/7.jpg')}}" alt="">
                         </a>
                         <div class="carousel-caption">
-                            <p>Các chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)</p>
+                            <p>Các chứng từ xác định thiệt...<a class="box inline" href="#slide_detail4" style="color:#ffffff;"><strong>chi tiết</strong></a></p>
                         </div>
                     </div>
 
@@ -370,8 +358,8 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                         <p><strong>Tổng Công ty Cổ phần Bảo hiểm Bưu điện - PTI</strong></p>
                         <p>Tầng 8 toà nhà Harec – 4A Láng Hạ, Ba Đình, Hà Nội</p>
                         <p>Website: <a href="https://www.epti.vn">www.epti.vn – www.pti.com.vn</a></p>
-                        <p>Fanpage: <a href="www.facebook.com/Bao.Hiem.Truc.Tuyen.PTI">www.facebook.com/Bao.Hiem.Truc.Tuyen.PTI</a></p>
-                        <p>Youtube: <a href="www.youtube.com/channel/UCn6RoUGGaZFevhoFnEMoRCg">www.youtube.com/channel/UCn6RoUGGaZFevhoFnEMoRCg</a></p>
+                        <p>Fanpage: <a href="www.facebook.com/Bao.Hiem.Truc.Tuyen.PTI">www.facebook.com/PTI</a></p>
+                        <p>Youtube: <a href="www.youtube.com/channel/UCn6RoUGGaZFevhoFnEMoRCg">www.youtube.com/PTI</a></p>
                         <p><strong>Call Center:</strong> 1900 454575</p>
                         <p><strong>Hotline:</strong> 08 7304 567804 7300 5678</p>
                         <p><strong>Điện thoại:</strong> (+844) 3772 4466</p>
@@ -392,11 +380,53 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                         </ul>
                     </nav>
                 </div>
+
+                <div style='display:none'>
+                    <div id='slide_detail1' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Bản sao các giấy tờ...</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
+                        <p>
+Bản sao các giấy tờ sau (có xác nhận của cơ quan có thẩm quyền hoặc của nhân viên PTI): Giấy chứng nhận bảo hiểm; Giấy phép Lái xe; Đăng ký xe hoặc hóa đơn mua xe đối với trường hợp xe mới chưa đăng ký; Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường phương tiện giao thông cơ giới đường bộ.
+                        </p>
+                    </div>
+                </div>
+
+                <div style='display:none'>
+                    <div id='slide_detail2' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Bản kết luận điều tra...</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
+                        <p>
+Bản kết luận điều tra tai nạn của cơ quan Công an và/hoặc bản sao bộ hồ sơ tai nạn (có xác nhận của cơ quan Công an thụ lý tai nạn) bao gồm: Sơ đồ hiện trường tai nạn giao thông; Biên bản khám nghiệm hiện trường; Biên bản khám nghiệm xe liên quan đến tai nạn; Biên bản giải quyết tai nạn giao thông…
+Bản án hoặc Quyết định của Toà án (nếu có).
+                        </p>
+                    </div>
+                </div>
+
+                <div style='display:none'>
+                    <div id='slide_detail3' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Trường hợp tổn thất do...</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
+                        <p>
+Trường hợp tổn thất do Người thứ ba gây ra: Biên bản xác định mức độ thiệt hại về người và tài sản, mức độ lỗi của các bên; Tài liệu minh chứng chủ xe bảo lưu quyền cho PTI đòi Người thứ ba; Giấy chuyển quyền đòi Người thứ ba của chủ xe.
+                        </p>
+                    </div>
+                </div>
+
+               <div style='display:none'>
+                    <div id='slide_detail4' style='padding:10px; background:#fff;'>
+                        <h3 style="text-align:center; "><strong>Các chứng từ xác định thiệt...</strong></h3>
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
+                        <p>
+Các chứng từ xác định thiệt hại do tai nạn: các chứng từ, hóa đơn liên quan đến việc sửa chữa, thay thế hoặc mua mới. Biên bản mất cắp, mất cướp hoặc mất tích xe có xác nhận của cơ quan có thẩm quyền (trong trường hợp xe bị mất, bị cướp)
+                        </p>
+                    </div>
+                </div>
+
                 <!-- This contains the hidden content for inline calls -->
                 <div style='display:none'>
                     <div id='inline_content1' style='padding:10px; background:#fff;'>
                         <h3 style="text-align:center; "><strong>Quyền lợi cơ bản</strong></h3>
-                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
                         <p>
                             <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Đâm, va, lật, đổ.
                             <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Hoả hoạn, cháy, nổ.
@@ -411,7 +441,7 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                 <div style='display:none'>
                     <div id='inline_content2' style='padding:10px; background:#fff;'>
                         <h3 style="text-align:center; "><strong>Ngoài ra PTI còn hỗ trợ những chi phí cần thiết và hợp lý nhằm</strong></h3>
-                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
                         <p>
                             <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Ngăn ngừa, hạn chế tổn thất phát sinh thêm;
                             <br><span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Chi phí đưa xe thiệt hại tới nơi sửa chữa gần nhất không vượt quá 20.000.000 đồng/vụ chưa bao gồm thuế giá trị gia tăng (trừ trường hợp có thỏa thuận khác bằng văn bản).
@@ -424,7 +454,7 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
                 <div style='display:none'>
                     <div id='inline_content3' style='padding:10px; background:#fff;'>
                         <h3 style="text-align:center; "><strong>Quyền lợi bổ sung</strong></h3>
-                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#">
+                        <img src="{{url_for('static', filename='images/t-bg.png')}}" alt="#" style="width:100%;">
                         <br>
                         <p>
                            <span class="glyphicon glyphicon-ok"></span>&nbsp&nbsp  Quyền lợi bổ sung “không trừ khấu hao” khi tổn thất bộ phận (điều khoản mới thay cũ): nếu chủ xe tham gia bảo hiểm vật chất xe và đóng thêm phụ phí bảo hiểm, PTI sẽ trả tiền bồi thường toàn bộ giá trị thực tế của các bộ phận bị hư hỏng cần phải thay thế thuộc phạm vi bảo hiểm mà không trừ phần hao mòn (khấu hao) sử dụng.
@@ -509,7 +539,7 @@ Bản án hoặc Quyết định của Toà án (nếu có).</p>
         </script>
 
         <script>
-            $(".inline").colorbox({inline:true, width:"50%"});
+            $(".inline").colorbox({inline:true, width:"95%"});
         </script>
     </body>
 
